@@ -1,0 +1,17 @@
+<a class="card" href="/movie/<%= movie._id %>" >
+  <div class="card__image">
+    <img src="<%= movie.image %>" alt="<%= movie.title %> Image" />
+  </div>
+  <div class="card__body">
+    <h2 class="card__title">
+      <%= movie.title %>
+    </h2>
+    <p class="card__description">
+      <%= movie.Description %>
+    </p>
+    <p class="card__description">
+      Duration :  <%= movie.Duration %>  <br/>
+      Rating : <%= movie.Rating %>
+    </p>
+  </div>
+</a>

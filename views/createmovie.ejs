@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/base.css">
+  <link rel="stylesheet" href="/createmovie.css">
+  <title>Create Movie</title>
+</head>
+
+<body>
+  <%- include("../partials/header.ejs") %>
+
+    <div class="container">
+      <form action="/create/movies" method="post" class="form">
+
+        <div class="form__image">
+          <label for="movieImage" class="label__image">Movie Image</label>
+          <input type="text" name="image" id="movieimage" class="input__image">
+        </div>
+
+        <div class="form__title">
+          <label for="movieTitle" class="label__title">Movie Title</label>
+          <input type="text" name="title" id="movietitle" class="input__title">
+        </div>
+
+        <div class="form__description">
+          <label for="movieDescription" class="label__description">Description</label>
+          <textarea type="text" name="description" id="movieDescription" class="textarea__desceiption"></textarea>
+        </div>
+
+        <div class="form__rating">
+          <label for="movieRating" class="label__rating">Movie Rating</label>
+          <input type="number" name="Rating" id="movieRating" class="input__rating">
+        </div>
+
+        <div class="form__duration">
+          <label for="movieDuration" class="label__duration">Movie Duration</label>
+          <input type="text" name="Duration" id="movieDuration" class="input__duration">
+        </div>
+
+        <button class="create__btn" type="submit">Create</button>
+      </form>
+    </div>
+
+</body>
+
+</html>

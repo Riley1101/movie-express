@@ -1,0 +1,65 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* viewport height - header height */
+  height: calc(100vh - 3.5em);
+  border: 1px solid red;
+}
+
+
+
+.form {
+  min-width: 316px;
+  border: solid 1px #e3e3e3;
+  padding: 2.5em;
+  border-radius: 5px;
+  max-width: max-content;
+}
+
+.form__email {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__email__label {
+  margin-bottom: 0.5em;
+}
+
+.form__email__input {
+  padding-inline: 0.5em;
+  padding-block: 0.8em;
+  border: 1px solid #e3e3e3;
+  margin-bottom: 1em;
+}
+
+.form__password {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__password__label {
+  margin-bottom: 0.5em;
+}
+
+.form__password__input {
+  padding-inline: 0.5em;
+  padding-block: 0.8em;
+  border: 1px solid #e3e3e3;
+  margin-bottom: 1em;
+}
+
+.login__btn {
+  width: 100%;
+  padding-inline: 0.3em;
+  padding-block: 1em;
+  background-color: #0450ff;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login__btn:hover {
+  outline: 1px solid black;
+}

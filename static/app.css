@@ -1,0 +1,67 @@
+
+
+
+.hero {
+  min-height: 300px;
+  border-bottom: 1px solid #aaaaaa;
+}
+/* home page */
+
+.container {
+  padding-inline: 1em;
+  /* padding top-bottom */
+  padding-block: 1em;
+
+}
+
+.section__title {
+  font-size: 1.5rem;
+  margin-bottom: 1em;
+}
+
+/* grid portion start here */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1em;
+}
+
+/* card */
+.card {
+  display:block;
+  border: solid 1px #e3e3e3;
+  padding: 1em;
+  border-radius: 5px;
+  max-width: max-content;
+}
+
+.card__title {
+  font-size: 1.2rem;
+  margin-bottom: 0.3em;
+}
+
+.card__image {
+  min-height: 180px;
+}
+
+.card__image img {
+  max-width: 100%;
+  max-height: 250px;
+}
+
+.card__description {
+  font-size: 0.8rem;
+  color: #222222db;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 600px) {
+  .container {
+    padding-inline: 15%;
+    padding-block: 2em;
+  }
+}

@@ -1,0 +1,24 @@
+<header class="header">
+  <a href="/" class="header__logo">LOGO</a>
+  <nav class="header__nav">
+<ul class="header__nav__list">
+  <li class="header__nav__list__item">
+    <a href="/">Home</a>
+  </li>
+  <% if (user) { %>
+    <h1>Welcome <%= user.username %></h1>
+    <form action="">
+      <button type="submit">Sign Out</button>
+    </form>
+  <% } else { %>
+    <li class="header__nav__list__item">
+      <a href="/sign-in">Sign In</a>
+    </li>
+    <li class="header__nav__list__item">
+      <a href="/sign-up">Sign Up</a>
+    </li>
+  <% } %>
+  
+</ul>
+  </nav>
+</header>

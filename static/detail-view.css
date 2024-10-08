@@ -1,0 +1,14 @@
+/* write stylings for detail view */
+
+.container {
+  padding-inline: 1em;
+  /* padding top-bottom */
+  padding-block: 1em;
+}
+
+@media screen and (min-width: 600px) {
+  .container {
+    padding-inline: 15%;
+    padding-block: 2em;
+  }
+}
