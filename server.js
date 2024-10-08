@@ -168,9 +168,9 @@ app.post("/update/movies/:id", async (req, res) => {
       {
         title,
         image,
-        description: Description,
-        duration: Duration,
-        rating: Rating,
+        Description,
+        Duration,
+        Rating,
       },
       { new: true }, // Return the updated document
     );
