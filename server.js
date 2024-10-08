@@ -66,6 +66,24 @@ app.get("/movie/:id", async (req, res) => {
   }
 });
 
+// edit movie path
+app.get("/movie/edit/:id", async (req, res) => {
+  // Get the ID from the URL
+  try {
+    // Get the ID from the URL
+    const paramId = req.params.id;
+    // Fetch movie with id from the database
+    const movie = await Movie.findById(paramId);
+    if (!movie) {
+      return res.send("Movie not found");
+    }
+    // Send the movie to ejs and render on the page )
+    res.render("editView.ejs", { movie });
+  } catch (error) {
+    res.send("Internal Server Error");
+  }
+});
+
 //Sign-in
 app.get("/sign-in", (req, res) => {
   res.render("signIn.ejs");
@@ -136,6 +154,37 @@ app.post("/user", async (req, res) => {
 /// Create movie ///
 app.get("/create/movies", (req, res) => {
   res.render("createmovie.ejs");
+});
+
+app.post("/update/movies/:id", async (req, res) => {
+  const { id } = req.params; // Get the ID from the URL parameters
+
+  const { title, image, Description, Duration, Rating } = req.body; // Extract other fields from the request body
+
+  try {
+    // Find the movie by ID and update it
+    const updatedMovie = await Movie.findByIdAndUpdate(
+      id,
+      {
+        title,
+        image,
+        description: Description,
+        duration: Duration,
+        rating: Rating,
+      },
+      { new: true }, // Return the updated document
+    );
+
+    if (!updatedMovie) {
+      return res.status(404).send("Movie not found");
+    }
+
+    // Redirect or respond with the updated movie
+    res.redirect(`/movie/${id}`); // Redirect to updated page
+  } catch (error) {
+    console.error("Error updating movie:", error);
+    res.status(500).send("Internal server error");
+  }
 });
 
 // we need a async function as this involves db queries

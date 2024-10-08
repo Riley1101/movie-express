@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/base.css">
+  <link rel="stylesheet" href="/edit-view.css">
+  <title>Create Movie</title>
+</head>
+
+<body>
+  <%- include("../partials/header.ejs") %>
+
+    <div class="container">
+    <form action="/update/movies/<%= movie._id %>" method="post" class="form">
+
+        <div class="form__image">
+          <label for="movieImage" class="label__image">Movie Image</label>
+          <input type="text" name="image" id="movieimage" class="input__image" value="<%= movie.image %>">
+        </div>
+
+        <div class="form__title">
+          <label for="movieTitle" class="label__title">Movie Title</label>
+          <input type="text" name="title" id="movietitle" class="input__title" value="<%= movie.title %>">
+        </div>
+
+        <div class="form__description">
+          <label for="movieDescription" class="label__description">Description</label>
+          <textarea name="description" id="movieDescription" class="textarea__description"><%= movie.Description %></textarea>
+        </div>
+
+        <div class="form__rating">
+          <label for="movieRating" class="label__rating">Movie Rating</label>
+          <input type="number" name="rating" id="movieRating" class="input__rating" value="<%= movie.Rating %>" step="0.1" min="0" max="10">
+        </div>
+
+        <div class="form__duration">
+          <label for="movieDuration" class="label__duration">Movie Duration</label>
+          <input type="text" name="duration" id="movieDuration" class="input__duration" value="<%= movie.Duration %>">
+        </div>
+
+        <button class="create__btn" type="submit">Update</button>
+      </form>
+
+    </div>
+
+</body>
+
+</html>
