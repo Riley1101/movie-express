@@ -27,17 +27,17 @@
 
         <div class="form__description">
           <label for="movieDescription" class="label__description">Description</label>
-          <textarea name="description" id="movieDescription" class="textarea__description"><%= movie.Description %></textarea>
+          <textarea name="Description" id="movieDescription" class="textarea__description"><%= movie.Description %></textarea>
         </div>
 
         <div class="form__rating">
           <label for="movieRating" class="label__rating">Movie Rating</label>
-          <input type="number" name="rating" id="movieRating" class="input__rating" value="<%= movie.Rating %>" step="0.1" min="0" max="10">
+          <input type="number" name="Rating" id="movieRating" class="input__rating" value="<%= movie.Rating %>" step="0.1" min="0" max="10">
         </div>
 
         <div class="form__duration">
           <label for="movieDuration" class="label__duration">Movie Duration</label>
-          <input type="text" name="duration" id="movieDuration" class="input__duration" value="<%= movie.Duration %>">
+          <input type="text" name="Duration" id="movieDuration" class="input__duration" value="<%= movie.Duration %>">
         </div>
 
         <button class="create__btn" type="submit">Update</button>
